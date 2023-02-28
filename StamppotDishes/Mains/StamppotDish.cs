@@ -3,6 +3,10 @@ using KitchenLib.Customs;
 using System.Collections.Generic;
 using UnityEngine;
 using StamppotDishes;
+using KitchenLib.Utils;
+
+using System;
+using KitchenLib.References;
 
 namespace StamppotDishes.Mains
 {
@@ -42,6 +46,19 @@ namespace StamppotDishes.Mains
             Main.Onion,
             Main.Plate,
             Main.Pot
+        };
+        public override HashSet<Process> RequiredProcesses => new()
+        {
+            Main.Chop,
+            Main.Cook
+        };
+        public override Dictionary<Locale, string> Recipe => new()
+        {
+            { Locale.English, "Grab a pot and add water. Combine chopped carrot, chopped potato and chopped onion and add to pot and cook. Makes several servings" }
+        };
+        public override List<(Locale, UnlockInfo)> InfoList => new List<(Locale, UnlockInfo)>
+        {
+            { Locale.English, LocalisationUtils.CreateUnlockInfo("Hutspot", "Adds Hutspot as a Main", "Nothing better than a hotchpotch on a winter day") }
         };
     }
 }

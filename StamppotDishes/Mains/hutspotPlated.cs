@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static KitchenData.ItemGroup;
 
 namespace StamppotDishes.Mains
 {
@@ -20,14 +21,14 @@ namespace StamppotDishes.Mains
         public override string ColourBlindTag => "Hu";
         public override bool CanContainSide => true;
 
-        public override List<ItemGroup.ItemSet> Sets => new()
+        public override List<ItemSet> Sets => new List<ItemSet>()
         {
-            new ItemGroup().ItemSet()
+            new ItemSet()
             {
                 Max = 2,
                 Min = 2,
                 IsMandatory = true,
-                ItemSetData = new List<Item>()
+                Items = new List<Item>()
                 {
                     Main.hutspotPortion,
                     Main.Plate

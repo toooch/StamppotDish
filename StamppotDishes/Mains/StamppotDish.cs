@@ -23,7 +23,6 @@ namespace StamppotDishes.Mains
 
         public override List<string> StartingNameSet => new List<string>
         {
-            "Lick the Stamp and send it",
             "Stamp it"
         };
 

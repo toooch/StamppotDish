@@ -35,5 +35,24 @@ namespace StamppotDishes.Mains
                 }
             },
         };
+
+        public override void OnRegister(GameDataObject gameDataObject)
+        {
+
+            var materials = new Material[]
+            {
+                  MaterialUtils.GetExistingMaterial("Plate"),
+                  MaterialUtils.GetExistingMaterial("Plate - Ring"),
+                  MaterialUtils.GetExistingMaterial("Carrot - Cooked")
+        };
+            MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "Plate", materials);
+
+            materials[0] = MaterialUtils.GetExistingMaterial("Carrot - Cooked");
+            MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
+
+            materials[0] = MaterialUtils.GetExistingMaterial("Plate");
+            MaterialUtils.ApplyMaterial(Prefab, "Plate", materials);
+        }
     }
 }

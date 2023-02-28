@@ -1,4 +1,4 @@
-﻿using StamppotDishes.Customs;
+﻿using StamppotDishes.Mains;
 
 using Kitchen;
 using KitchenLib.References;
@@ -29,7 +29,7 @@ using Object = UnityEngine.Object;
 
 namespace StamppotDishes
 {
-    public class Mod : BaseMod, IModSystem
+    public class Main : BaseMod, IModSystem
     {
         // GUID must be unique and is recommended to be in reverse domain name notation
         // Mod Name is displayed to the player and listed in the mods menu
@@ -43,15 +43,64 @@ namespace StamppotDishes
         // e.g. ">=1.1.3" current and all future
         // e.g. ">=1.1.3 <=1.2.3" for all from/until
 
-        public static AssetBundle Bundle;
+        public Main() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
 
-        public Mod() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
+        public static AssetBundle bundle;
 
-        private void AddGameData()
+        // Base game stuff
+        internal static Item Pot => GetExistingGDO<Item>(ItemReferences.Pot);
+        internal static Item Plate => GetExistingGDO<Item>(ItemReferences.Plate);
+        internal static Item DirtyPlate => GetExistingGDO<Item>(ItemReferences.PlateDirty);
+
+
+        internal static Item ChoppedPotato => GetExistingGDO<Item>(ItemReferences.PotatoChopped);
+        internal static Item ChoppedCarrot => GetExistingGDO<Item>(ItemReferences.CarrotChopped);
+        internal static Item ChoppedOnion => GetExistingGDO<Item>(ItemReferences.OnionChopped);
+
+        // Custom stuff
+        internal static Dish StamppotDish => GetModdedGDO<Dish, StamppotDish>();
+        internal static Item Hutspot => GetModdedGDO<ItemGroup, Hutspot>();
+
+        protected override void OnPostActivate(KitchenMods.Mod mod)
         {
-            // Hutspot
-            AddGameDataObject<>();
+            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
+            //Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
+            //{
+            //
+            //}
+
+            AddGameDataObject<StamppotDish>();
+
+        }
+
+
+
+
+
+
+
+
+        private static T1 GetModdedGDO<T1, T2>() where T1 : GameDataObject
+        {
+            return (T1)GDOUtils.GetCustomGameDataObject<T2>().GameDataObject;
+        }
+        private static T GetExistingGDO<T>(int id) where T : GameDataObject
+        {
+            return (T)GDOUtils.GetExistingGDO(id);
+        }
+        internal static T Find<T>(int id) where T : GameDataObject
+        {
+            return (T)GDOUtils.GetExistingGDO(id) ?? (T)GDOUtils.GetCustomGameDataObject(id)?.GameDataObject;
+        }
+
+        internal static T Find<T, C>() where T : GameDataObject where C : CustomGameDataObject
+        {
+            return GDOUtils.GetCastedGDO<T, C>();
+        }
+        internal static T Find<T>(string modName, string name) where T : GameDataObject
+        {
+            return GDOUtils.GetCastedGDO<T>(modName, name);
         }
     }
 }

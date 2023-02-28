@@ -2,6 +2,7 @@
 using KitchenLib.Customs;
 using System.Collections.Generic;
 using UnityEngine;
+using StamppotDishes;
 
 namespace StamppotDishes.Mains
 {
@@ -9,7 +10,7 @@ namespace StamppotDishes.Mains
     {
         public override string UniqueNameID => "Stamppot";
         public override DishType Type => DishType.Base;
-        public override GameObject DisplayPrefab => Mod.Bundle.LoadAsset<GameObject>("StamppotIcon");
+        public override GameObject DisplayPrefab => Main.bundle.LoadAsset<GameObject>("StamppotIcon");
         public override GameObject IconPrefab => DisplayPrefab;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeDecrease;
         public override CardType CardType => CardType.Default;
@@ -30,7 +31,7 @@ namespace StamppotDishes.Mains
         {
             new Dish.MenuItem
             {
-                Item = Hutspot,
+                Item = Main.hutspotPlated,
                 Phase = MenuPhase.Main,
                 Weight = 1,
             }

@@ -29,7 +29,7 @@ using Object = UnityEngine.Object;
 
 namespace StamppotDishes
 {
-    public class Mod : BaseMod, IModSystem
+    public class Main : BaseMod, IModSystem
     {
         // GUID must be unique and is recommended to be in reverse domain name notation
         // Mod Name is displayed to the player and listed in the mods menu
@@ -45,7 +45,7 @@ namespace StamppotDishes
 
         public static AssetBundle Bundle;
 
-        public Mod() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
+        public Main() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
 
         private void AddGameData()
         {

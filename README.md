@@ -33,7 +33,6 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -49,13 +48,6 @@ On a cold day, nothing beats a pan of delicious Dutch stew. The classic hutspot 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 
 <!-- CONTRIBUTING -->
 ## Contributing

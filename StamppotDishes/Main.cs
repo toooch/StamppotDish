@@ -56,6 +56,7 @@ namespace StamppotDishes
 
         // Base game stuff
         internal static Item Pot => GetExistingGDO<Item>(ItemReferences.Pot);
+        internal static Item Water => GetExistingGDO<Item>(ItemReferences.Water);
         internal static Item Plate => GetExistingGDO<Item>(ItemReferences.Plate);
         internal static Item DirtyPlate => GetExistingGDO<Item>(ItemReferences.PlateDirty);
 
@@ -69,7 +70,7 @@ namespace StamppotDishes
 
         // Custom stuff
         internal static Dish StamppotDish => GetModdedGDO<Dish, StamppotDish>();
-        internal static Item Hutspot => GetModdedGDO<Item, hutspotPot>();
+        internal static Item hutspotPot => GetModdedGDO<Item, hutspotPot>();
         internal static Item hutspotPortion => GetModdedGDO<Item, hutspotPortion>();
         internal static Item hutspotPlated => GetModdedGDO<Item, hutspotPlated>();
 

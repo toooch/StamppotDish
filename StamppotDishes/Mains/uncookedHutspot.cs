@@ -1,5 +1,6 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
+using KitchenLib.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +11,28 @@ using static KitchenData.ItemGroup;
 
 namespace StamppotDishes.Mains
 {
-    class hutspotPlated : CustomItemGroup
+    class uncookedHutspot : CustomItemGroup<MyItemGroupView>
     {
         public override string UniqueNameID => "Uncooked Hutspot";
         public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("UncookedHutspot");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
+        public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
         public override Item DisposesTo => Main.Pot;
         public override string ColourBlindTag => "Hu";
 
-        public override ItemStorage ItemStorageFlags => new ItemStorage.Dish;
 
 
         public override List<ItemSet> Sets => new List<ItemSet>()
         {   
             new ItemSet()
             { 
-               Max = 1,
-               Min = 1,
+               Max = 2,
+               Min = 2,
                IsMandatory = true,
                Items = new List<Item>()
                {
-                   Main.Pot
+                   Main.Pot,
+                   Main.Water
                }
             },            
             
@@ -52,9 +54,26 @@ namespace StamppotDishes.Mains
             new Item.ItemProcess()
             {
                 Duration = 5,
-                Process = Main.Cook,
+                Process = Main.Cook
+            },
+            new Item.ItemProcess()
+            {
+                Duration = 3,
+                Process = Main.Knead,
                 Result = Main.hutspotPot
             }
+        };
+
+        public override void OnRegister(GameDataObject gameDataObject)
+        {
+            var materials = new Material[]
+            {
+                MaterialUtils.GetExistingMaterial("Metal"),
+            };
+
+            MaterialUtils.ApplyMaterial(Prefab, "Pot", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Metal Dark");
+            MaterialUtils.ApplyMaterial(Prefab, "PotHandles", materials)
         }
     }
 }

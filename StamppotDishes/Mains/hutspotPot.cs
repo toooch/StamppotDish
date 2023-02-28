@@ -38,22 +38,14 @@ namespace StamppotDishes.Mains.Hutspot
             var materials = new Material[]
             {
                    MaterialUtils.GetExistingMaterial("Metal"),
+                   MaterialUtils.GetExistingMaterial("Carrot - Cooked")
              };
             MaterialUtils.ApplyMaterial(Prefab, "Pot", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Metal Dark");
             MaterialUtils.ApplyMaterial(Prefab, "PotHandles", materials);
 
-            materials[0] = MaterialUtils.GetExistingMaterial("Tomato Flesh");
-            MaterialUtils.ApplyMaterial(Prefab, "Sauce", materials);
-
-            materials[0] = MaterialUtils.GetExistingMaterial("Tomato");
-            MaterialUtils.ApplyMaterial(Prefab, "Tomatoes", materials);
-
-            materials[0] = MaterialUtils.GetExistingMaterial("Tomato Flesh 3");
-            MaterialUtils.ApplyMaterial(Prefab, "Pepper", materials);
-
-            materials[0] = MaterialUtils.GetExistingMaterial("Onion - Flesh");
-            MaterialUtils.ApplyMaterial(Prefab, "Onion", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Carrot - Cooked");
+            MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
 
         }
     }

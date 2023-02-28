@@ -1,0 +1,2 @@
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.AssemblyReference.cache
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.CoreCompileInputs.cache

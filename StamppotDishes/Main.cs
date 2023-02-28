@@ -26,7 +26,7 @@ using static KitchenLib.Utils.GDOUtils;
 using static KitchenLib.Utils.KitchenPropertiesUtils;
 using TMPro;
 using Object = UnityEngine.Object;
-using StamppotDishes.Mains.Hutspot;
+//using StamppotDishes.Mains.StamppotDish;
 
 namespace StamppotDishes
 {

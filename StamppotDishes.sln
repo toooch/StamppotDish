@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StamppotDishes", "StamppotDishes\StamppotDishes.csproj", "{0168A248-40A7-4F7A-AAB6-257D962D5814}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0168A248-40A7-4F7A-AAB6-257D962D5814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0168A248-40A7-4F7A-AAB6-257D962D5814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0168A248-40A7-4F7A-AAB6-257D962D5814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0168A248-40A7-4F7A-AAB6-257D962D5814}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C66CAD6-EF5C-4272-9131-641559C67C78}
+	EndGlobalSection
+EndGlobal

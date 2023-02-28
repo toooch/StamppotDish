@@ -25,7 +25,7 @@ using static KitchenData.ItemGroup;
 using static KitchenLib.Utils.GDOUtils;
 using static KitchenLib.Utils.KitchenPropertiesUtils;
 using TMPro;
-using Object = UnityEngine.Object;
+
 
 
 namespace StamppotDishes
@@ -69,7 +69,7 @@ namespace StamppotDishes
         internal static Item ChoppedOnion => GetExistingGDO<Item>(ItemReferences.OnionChopped);
 
         // Custom stuff
-        internal static Dish StamppotDish => GetModdedGDO<Dish, StamppotDish>();
+        internal static Dish StamppotDish => GetModdedGDO<Dish, stamppotDish>();
         internal static Item hutspotPot => GetModdedGDO<Item, hutspotPot>();
         internal static Item hutspotPortion => GetModdedGDO<Item, hutspotPortion>();
         internal static Item hutspotPlated => GetModdedGDO<Item, hutspotPlated>();
@@ -83,7 +83,7 @@ namespace StamppotDishes
             //
             //}
 
-            AddGameDataObject<StamppotDish>();
+            AddGameDataObject<stamppotDish>();
 
         }
 

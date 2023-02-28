@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KitchenLib.Utils;
 using UnityEngine;
 using static KitchenData.ItemGroup;
 
@@ -42,8 +43,7 @@ namespace StamppotDishes.Mains
             var materials = new Material[]
             {
                   MaterialUtils.GetExistingMaterial("Plate"),
-                  MaterialUtils.GetExistingMaterial("Plate - Ring"),
-                  MaterialUtils.GetExistingMaterial("Carrot - Cooked")
+                  MaterialUtils.GetExistingMaterial("Plate - Ring")
         };
             MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
             MaterialUtils.ApplyMaterial(Prefab, "Plate", materials);

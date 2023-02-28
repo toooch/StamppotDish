@@ -7,11 +7,10 @@ using KitchenLib.Utils;
 
 using System;
 using KitchenLib.References;
-using Main;
 
 namespace StamppotDishes.Mains
 {
-    class StamppotDish : CustomDish
+    class stamppotDish : CustomDish
     {
         public override string UniqueNameID => "Stamppot";
         public override DishType Type => DishType.Base;

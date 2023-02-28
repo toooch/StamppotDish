@@ -1,10 +1,6 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace StamppotDishes.Mains
@@ -34,8 +30,14 @@ namespace StamppotDishes.Mains
         {
             new Dish.MenuItem
             {
-                
+                Item = Hutspot,
+                Phase = MenuPhase.Main,
+                Weight = 1,
             }
+        };
+        public override HashSet<Item> MinimumIngredients => new()
+        {
+            
         }
     }
 }

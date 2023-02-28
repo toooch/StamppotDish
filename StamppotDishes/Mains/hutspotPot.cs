@@ -18,14 +18,14 @@ using StamppotDishes;
 
 namespace StamppotDishes.Mains.Hutspot
 {
-    class Hutspot : CustomItem
+    class hutspotPot : CustomItem
     {
         public override string UniqueNameID => "Hutspot";
-        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("CookedChili");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("HutspotPot");
         public override Item DisposesTo => Main.Pot;
-        public override int SplitCount => 8;
+        public override int SplitCount => 5;
         public override float SplitSpeed => 2f;
-        public override Item SplitSubItem => Main.ChiliPortion;
+        public override Item SplitSubItem => Main.hutspotPortion;
         public override List<Item> SplitDepletedItems => new List<Item>
         {
             Main.Pot

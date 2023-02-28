@@ -54,15 +54,18 @@ namespace StamppotDishes
         internal static Item DirtyPlate => GetExistingGDO<Item>(ItemReferences.PlateDirty);
 
 
+        internal static Item Potato => GetExistingGDO<Item>(ItemReferences.Potato);
         internal static Item ChoppedPotato => GetExistingGDO<Item>(ItemReferences.PotatoChopped);
+        internal static Item Carrot => GetExistingGDO<Item>(ItemReferences.Carrot);
         internal static Item ChoppedCarrot => GetExistingGDO<Item>(ItemReferences.CarrotChopped);
+        internal static Item Onion => GetExistingGDO<Item>(ItemReferences.Onion);
         internal static Item ChoppedOnion => GetExistingGDO<Item>(ItemReferences.OnionChopped);
 
         // Custom stuff
         internal static Dish StamppotDish => GetModdedGDO<Dish, StamppotDish>();
-        internal static Item Hutspot => GetModdedGDO<Item, Hutspot>();
+        internal static Item Hutspot => GetModdedGDO<Item, hutspotPot>();
         internal static Item hutspotPortion => GetModdedGDO<Item, hutspotPortion>();
-        internal static 
+        internal static Item hutspotPlated => GetModdedGDO<Item, hutspotPlated>();
 
         new void OnPostActivate(Mod mod)
         {

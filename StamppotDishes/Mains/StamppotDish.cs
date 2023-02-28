@@ -38,7 +38,11 @@ namespace StamppotDishes.Mains
         };
         public override HashSet<Item> MinimumIngredients => new()
         {
-            
-        }
+            Main.Potato,
+            Main.Carrot,
+            Main.Onion,
+            Main.Plate,
+            Main.Pot
+        };
     }
 }

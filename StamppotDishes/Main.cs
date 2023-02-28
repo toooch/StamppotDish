@@ -48,6 +48,12 @@ namespace StamppotDishes
 
         public static AssetBundle bundle;
 
+        // Processes
+        internal static Process Cook => GetExistingGDO<Process>(ProcessReferences.Cook);
+        internal static Process Chop => GetExistingGDO<Process>(ProcessReferences.Chop);
+        internal static Process Knead => GetExistingGDO<Process>(ProcessReferences.Knead);
+        internal static Process Oven => GetExistingGDO<Process>(ProcessReferences.RequireOven);
+
         // Base game stuff
         internal static Item Pot => GetExistingGDO<Item>(ItemReferences.Pot);
         internal static Item Plate => GetExistingGDO<Item>(ItemReferences.Plate);

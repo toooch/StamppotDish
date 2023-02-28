@@ -38,8 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="Mains\hutspotPlated.cs" />
-    <Compile Include="Mains\Hutspot.cs" />
+	  <Compile Include="Mains\hutspotPlated.cs" />
     <Compile Include="Mains\StamppotDish.cs" />
     <Compile Include="Mains\uncookedHutspot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

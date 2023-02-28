@@ -32,14 +32,13 @@ namespace StamppotDishes.Mains.uncookedHutspot
             },
             new ItemGroup.ItemSet()
             {
-                Max = 4,
-                Min = 4,
+                Max = 3,
+                Min = 3,
                 Items = new List<Item>()
                 {
-                    Main.TomatoSlice,
-                    Main.TomatoSauce,
-                    Main.OnionChopped,
-                    Main.ChoppedPeppers
+                    Main.ChoppedCarrot,
+                    Main.ChoppedOnion,
+                    Main.ChoppedPotato
                 }
             },
         };

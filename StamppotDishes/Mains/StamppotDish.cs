@@ -56,9 +56,9 @@ namespace StamppotDishes.Mains
         {
             { Locale.English, "Grab a pot and add water. Combine chopped carrot, chopped potato and chopped onion and add to pot and cook. Makes several servings" }
         };
-        public override List<(Locale, UnlockInfo)> InfoList => new List<(Locale, UnlockInfo)>
+        public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            { Locale.English, LocalisationUtils.CreateUnlockInfo("Hutspot", "Adds Hutspot as a Main", "Nothing better than a hotchpotch on a winter day") }
+            ( Locale.English, LocalisationUtils.CreateUnlockInfo("Hutspot", "Adds Hutspot as a Main", "Nothing better than a hotchpotch on a winter day") )
         };
     }
 }

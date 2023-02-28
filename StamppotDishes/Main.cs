@@ -26,6 +26,7 @@ using static KitchenLib.Utils.GDOUtils;
 using static KitchenLib.Utils.KitchenPropertiesUtils;
 using TMPro;
 using Object = UnityEngine.Object;
+using StamppotDishes.Mains.Hutspot;
 
 namespace StamppotDishes
 {
@@ -59,9 +60,11 @@ namespace StamppotDishes
 
         // Custom stuff
         internal static Dish StamppotDish => GetModdedGDO<Dish, StamppotDish>();
-        internal static Item Hutspot => GetModdedGDO<ItemGroup, Hutspot>();
+        internal static Item Hutspot => GetModdedGDO<Item, Hutspot>();
+        internal static Item hutspotPortion => GetModdedGDO<Item, hutspotPortion>();
+        internal static 
 
-        protected override void OnPostActivate(KitchenMods.Mod mod)
+        new void OnPostActivate(Mod mod)
         {
             bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 

@@ -7,10 +7,8 @@
     "\\StamppotDishes\\bin",
     "\\StamppotDishes\\bin\\Debug",
     "\\StamppotDishes\\bin\\Release",
-    "\\StamppotDishes\\obj\\Debug",
-    "\\StamppotDishes\\obj\\Debug\\TempPE",
-    "\\StamppotDishes\\obj\\Release"
+    "\\StamppotDishes\\Mains"
   ],
-  "SelectedNode": "\\StamppotDishes\\StamppotDishes.csproj",
+  "SelectedNode": "\\StamppotDishes\\Mains\\hutspotPot.cs",
   "PreviewInSolutionExplorer": false
 }

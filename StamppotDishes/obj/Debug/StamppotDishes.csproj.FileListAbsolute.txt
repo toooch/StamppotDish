@@ -1,2 +1,6 @@
 C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.AssemblyReference.cache
 C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.CoreCompileInputs.cache
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.dll
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.pdb
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.dll
+C:\Users\Dirk\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.pdb

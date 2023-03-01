@@ -2,21 +2,17 @@
 using KitchenLib.Customs;
 using System.Collections.Generic;
 using UnityEngine;
-using StamppotDishes;
 using KitchenLib.Utils;
-
-using System;
-using KitchenLib.References;
 
 namespace StamppotDishes.Mains
 {
-    class stamppotDish : CustomDish
+    class StamppotDish : CustomDish
     {
         public override string UniqueNameID => "Stamppot";
         public override DishType Type => DishType.Base;
         public override GameObject DisplayPrefab => Main.bundle.LoadAsset<GameObject>("StamppotIcon");
         public override GameObject IconPrefab => DisplayPrefab;
-        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeDecrease;
+        //public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeDecrease;
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;

@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-	<LangVersion>9.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,7 +38,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-	  <Compile Include="Mains\hutspotPlated.cs" />
+    <Compile Include="Mains\hutspotPlated.cs" />
+    <Compile Include="Mains\hutspotPortion.cs" />
+    <Compile Include="Mains\hutspotPot.cs" />
     <Compile Include="Mains\StamppotDish.cs" />
     <Compile Include="Mains\uncookedHutspot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

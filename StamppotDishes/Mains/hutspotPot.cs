@@ -1,22 +1,11 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.Utils;
-using static StamppotDishes.Mains.StamppotDish;
-using Mono.Cecil.Cil;
-using System.Collections.Generic;
-using Unity.Transforms;
-using UnityEngine;
-
-using IngredientLib.Util;
-using Kitchen;
-using KitchenData;
-using KitchenLib.Customs;
-using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
-using StamppotDishes;
 
-namespace StamppotDishes.Mains.Hutspot
+
+namespace StamppotDishes.Mains
 {
     class hutspotPot : CustomItem
     {

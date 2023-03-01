@@ -44,7 +44,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-On a cold day, nothing beats a pan of delicious Dutch stew. The classic hutspot and boerenkoolstamppot are the best known kinds of stamppot. But you can also make your stamppot differently, for example from sweet potato, spinach or beet. What is your favorite stew recipe? Get inspired by all kinds of delicious stew recipes here. Boil potatoes, add vegetables and mash away. Add some gravy, a meatball or smoked sausage and you are ready to go.
+On a cold, winter day, nothing beats a pot of delicious Dutch "Stamppot". The classic hutspot and boerenkoolstamppot are the best known kinds. Alternative ingredients are totally possible, for example sweet potato, spinach or beet. Grab your pots, potatoes and other vegetables and get to stamping!
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

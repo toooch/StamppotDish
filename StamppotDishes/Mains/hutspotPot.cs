@@ -10,14 +10,14 @@ namespace StamppotDishes.Mains
     class hutspotPot : CustomItem
     {
         public override string UniqueNameID => "Hutspot";
-        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("HutspotPot");
-        public override Item DisposesTo => Main.Pot;
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("HutspotPot");
+        public override Item DisposesTo => Mod.Pot;
         public override int SplitCount => 5;
         public override float SplitSpeed => 2f;
-        public override Item SplitSubItem => Main.hutspotPortion;
+        public override Item SplitSubItem => Mod.hutspotPortion;
         public override List<Item> SplitDepletedItems => new List<Item>
         {
-            Main.Pot
+            Mod.Pot
         };
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;

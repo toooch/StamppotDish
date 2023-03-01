@@ -8,7 +8,7 @@ namespace StamppotDishes.Mains
     class hutspotPortion : CustomItem
     {
         public override string UniqueNameID => "Hutspot Portion";
-        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("HutspotPortion");
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("HutspotPortion");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;

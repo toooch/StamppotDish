@@ -11,13 +11,11 @@ using UnityEngine;
 
 using System.Linq;
 using System.Reflection;
-
-
-
+using KitchenLib.Event;
 
 namespace StamppotDishes
 {
-    public class Main : BaseMod, IModSystem
+    public class Mod : BaseMod, IModSystem
     {
         // GUID must be unique and is recommended to be in reverse domain name notation
         // Mod Name is displayed to the player and listed in the mods menu
@@ -31,7 +29,7 @@ namespace StamppotDishes
         // e.g. ">=1.1.3" current and all future
         // e.g. ">=1.1.3 <=1.2.3" for all from/until
 
-        public Main() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
+        public Mod() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
 
         public static AssetBundle bundle;
 
@@ -62,14 +60,9 @@ namespace StamppotDishes
         internal static Item hutspotPlated => GetModdedGDO<Item, hutspotPlated>();
         internal static Item uncookedHutspot => GetModdedGDO<Item, uncookedHutspot>();
 
-        new void OnPostActivate(Mod mod)
+        protected override void OnPostActivate(KitchenMods.Mod mod)
         {
             bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
-
-            //Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
-            //{
-            //
-            //}
 
             
             AddGameDataObject<hutspotPlated>();
@@ -78,6 +71,17 @@ namespace StamppotDishes
             AddGameDataObject<StamppotDish>();
             AddGameDataObject<uncookedHutspot>();
 
+            // Add event to hutspotPot to knead, disabled for ease.
+            /*Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
+            {
+                hutspotPot.DerivedProcesses.Add(new Item.ItemProcess()
+                {
+                    Process = Knead,
+                    Result = hutspotPot,
+                    Duration = 2f
+                });
+            };*/
+
         }
 
 
@@ -85,7 +89,7 @@ namespace StamppotDishes
 
 
 
-
+        // stuff to easily get data from mod or base game
 
         private static T1 GetModdedGDO<T1, T2>() where T1 : GameDataObject
         {
@@ -108,5 +112,14 @@ namespace StamppotDishes
         {
             return GDOUtils.GetCastedGDO<T>(modName, name);
         }
+
+        // Stuff for logging
+        public static void LogInfo(string _log) { Debug.Log($"[{MOD_NAME}] " + _log); }
+        public static void LogWarning(string _log) { Debug.LogWarning($"[{MOD_NAME}] " + _log); }
+        public static void LogError(string _log) { Debug.LogError($"[{MOD_NAME}] " + _log); }
+        public static void LogInfo(object _log) { LogInfo(_log.ToString()); }
+        public static void LogWarning(object _log) { LogWarning(_log.ToString()); }
+        public static void LogError(object _log) { LogError(_log.ToString()); }
+
     }
 }

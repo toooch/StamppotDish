@@ -11,7 +11,6 @@ using UnityEngine;
 
 using System.Linq;
 using System.Reflection;
-using KitchenLib.Event;
 
 namespace StamppotDishes
 {
@@ -23,7 +22,7 @@ namespace StamppotDishes
         public const string MOD_GUID = "Tooch.PlateUp.StamppotDishes";
         public const string MOD_NAME = "Stamppot Dishes";
         public const string MOD_VERSION = "0.0.3";
-        public const string MOD_AUTHOR = "Tooch";
+        public const string MOD_AUTHOR = "Tooch#4004, Dirk.#4004";
         public const string MOD_GAMEVERSION = ">=1.1.4";
         // Game version this mod is designed for in semver
         // e.g. ">=1.1.3" current and all future
@@ -71,7 +70,8 @@ namespace StamppotDishes
             AddGameDataObject<StamppotDish>();
             AddGameDataObject<uncookedHutspot>();
 
-            // Add event to hutspotPot to knead, disabled for ease.
+            // Add event to hutspotPot to knead, disabled for ease
+            // !!! vgm is dit voor het aanpassen van bestaande dingen, zal wss überhaupt niet nodig zijn!
             /*Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
             {
                 hutspotPot.DerivedProcesses.Add(new Item.ItemProcess()

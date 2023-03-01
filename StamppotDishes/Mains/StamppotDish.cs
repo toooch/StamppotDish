@@ -10,7 +10,7 @@ namespace StamppotDishes.Mains
     {
         public override string UniqueNameID => "Stamppot";
         public override DishType Type => DishType.Base;
-        public override GameObject DisplayPrefab => Main.bundle.LoadAsset<GameObject>("hutspot");
+        public override GameObject DisplayPrefab => Mod.bundle.LoadAsset<GameObject>("hutspot");
         public override GameObject IconPrefab => DisplayPrefab;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeDecrease;
         public override CardType CardType => CardType.Default;
@@ -30,23 +30,23 @@ namespace StamppotDishes.Mains
         {
             new Dish.MenuItem
             {
-                Item = Main.hutspotPlated,
+                Item = Mod.hutspotPlated,
                 Phase = MenuPhase.Main,
                 Weight = 1,
             }
         };
         public override HashSet<Item> MinimumIngredients => new()
         {
-            Main.Potato,
-            Main.Carrot,
-            Main.Onion,
-            Main.Plate,
-            Main.Pot
+            Mod.Potato,
+            Mod.Carrot,
+            Mod.Onion,
+            Mod.Plate,
+            Mod.Pot
         };
         public override HashSet<Process> RequiredProcesses => new()
         {
-            Main.Chop,
-            Main.Cook
+            Mod.Chop,
+            Mod.Cook
         };
         public override Dictionary<Locale, string> Recipe => new()
         {

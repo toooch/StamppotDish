@@ -12,10 +12,10 @@ namespace StamppotDishes.Mains
     class uncookedHutspot : CustomItemGroup<MyItemGroupView>
     {
         public override string UniqueNameID => "Uncooked Hutspot";
-        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("UncookedHutspot");
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("UncookedHutspot");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
-        public override Item DisposesTo => Main.Pot;
+        public override Item DisposesTo => Mod.Pot;
         public override string ColourBlindTag => "Hu";
 
 
@@ -29,8 +29,8 @@ namespace StamppotDishes.Mains
                IsMandatory = true,
                Items = new List<Item>()
                {
-                   Main.Pot,
-                   Main.Water
+                   Mod.Pot,
+                   Mod.Water
                }
             },            
             
@@ -41,9 +41,9 @@ namespace StamppotDishes.Mains
                 IsMandatory = true,
                 Items = new List<Item>()
                 {
-                    Main.ChoppedCarrot,
-                    Main.ChoppedPotato,
-                    Main.ChoppedOnion
+                    Mod.ChoppedCarrot,
+                    Mod.ChoppedPotato,
+                    Mod.ChoppedOnion
                 }
             },
         };
@@ -52,14 +52,15 @@ namespace StamppotDishes.Mains
             new Item.ItemProcess()
             {
                 Duration = 5,
-                Process = Main.Cook
-            },
+                Process = Mod.Cook,
+                Result = Mod.hutspotPot
+            }/*,
             new Item.ItemProcess()
             {
                 Duration = 3,
-                Process = Main.Knead,
-                Result = Main.hutspotPot
-            }
+                Process = Mod.Knead,
+                Result = Mod.hutspotPot
+            }*/
         };
 
         public override void OnRegister(GameDataObject gameDataObject)
@@ -105,39 +106,39 @@ namespace StamppotDishes.Mains
                 new()
                 {
                     GameObject = GameObjectUtils.GetChildObject(prefab, "Carrot"),
-                    Item = Main.ChoppedCarrot
+                    Item = Mod.ChoppedCarrot
                 },
                 new()
                 {
                     GameObject = GameObjectUtils.GetChildObject(prefab, "Potato"),
-                    Item = Main.ChoppedPotato
+                    Item = Mod.ChoppedPotato
                 },
                 new()
                 {
                     GameObject = GameObjectUtils.GetChildObject(prefab, "Onion"),
-                    Item = Main.ChoppedOnion
+                    Item = Mod.ChoppedOnion
                 }
             };
             ComponentLabels = new()
             {
                 new()
                 {
-                    Item = Main.Pot,
+                    Item = Mod.Pot,
                     Text = ""
                 },
                 new()
                 {
-                    Item = Main.ChoppedCarrot,
+                    Item = Mod.ChoppedCarrot,
                     Text = "C"
                 },
                 new()
                 {
-                    Item = Main.ChoppedPotato,
+                    Item = Mod.ChoppedPotato,
                     Text = "P"
                 },
                 new()
                 {
-                    Item = Main.ChoppedOnion,
+                    Item = Mod.ChoppedOnion,
                     Text = "O"
                 },
             };

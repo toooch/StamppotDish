@@ -16,3 +16,9 @@ C:\Users\tomas\OneDrive\Documenten\GitHub\StamppotDish\StamppotDishes\obj\Debug\
 C:\Users\tomas\OneDrive\Documenten\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.pdb
 C:\Users\tomas\OneDrive\Documenten\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.dll
 C:\Users\tomas\OneDrive\Documenten\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.pdb
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.dll
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\bin\Debug\StamppotDishes.pdb
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.AssemblyReference.cache
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.csproj.CoreCompileInputs.cache
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.dll
+C:\Users\TC\Documents\GitHub\StamppotDish\StamppotDishes\obj\Debug\StamppotDishes.pdb

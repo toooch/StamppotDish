@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using KitchenLib.Utils;
 using UnityEngine;
 using static KitchenData.ItemGroup;
+using IngredientLib.Util;
 
 namespace StamppotDishes.Mains
 {
@@ -22,33 +23,35 @@ namespace StamppotDishes.Mains
         {
             new ItemSet()
             {
-                Max = 2,
-                Min = 2,
+                Max = 1,
+                Min = 1,
                 IsMandatory = true,
                 Items = new List<Item>()
                 {
-                    Mod.hutspotPortion,
                     Mod.Plate
                 }
             },
+            new ItemSet()
+            {
+                Max = 1,
+                Min = 1,
+                IsMandatory = true,
+                Items = new List<Item>()
+                {
+                    Mod.hutspotPortion
+                }
+            }
         };
 
         public override void OnRegister(GameDataObject gameDataObject)
         {
 
-            var materials = new Material[]
-            {
-                  MaterialUtils.GetExistingMaterial("Plate"),
-                  MaterialUtils.GetExistingMaterial("Plate - Ring")
-        };
-            MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
-            MaterialUtils.ApplyMaterial(Prefab, "Plate", materials);
+            var hutspot = Prefab.GetChild("Hutspot");
+            var plate = Prefab.GetChildFromPath("Plate/Plate.001");
 
-            materials[0] = MaterialUtils.GetExistingMaterial("Carrot - Cooked");
-            MaterialUtils.ApplyMaterial(Prefab, "Carrot - Cooked", materials);
-
-            materials[0] = MaterialUtils.GetExistingMaterial("Plate");
-            MaterialUtils.ApplyMaterial(Prefab, "Plate", materials);
+            
         }
+           
+        
     }
 }

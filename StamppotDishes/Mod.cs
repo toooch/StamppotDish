@@ -11,6 +11,7 @@ using UnityEngine;
 
 using System.Linq;
 using System.Reflection;
+using System;
 
 namespace StamppotDishes
 {
@@ -31,6 +32,12 @@ namespace StamppotDishes
         public Mod() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
 
         public static AssetBundle bundle;
+
+#if DEBUG
+        public const bool DEBUG_MODE = true;
+#else
+        public const bool DEBUG_MODE = false;
+#endif
 
         // Processes
         internal static Process Cook => GetExistingGDO<Process>(ProcessReferences.Cook);
@@ -59,16 +66,24 @@ namespace StamppotDishes
         internal static Item hutspotPlated => GetModdedGDO<Item, hutspotPlated>();
         internal static Item uncookedHutspot => GetModdedGDO<Item, uncookedHutspot>();
 
-        protected override void OnPostActivate(KitchenMods.Mod mod)
+        protected void AddGameData()
         {
-            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
-
+            LogInfo("Attempting to register game data...");
             
             AddGameDataObject<hutspotPlated>();
             AddGameDataObject<hutspotPortion>();
             AddGameDataObject<hutspotPot>();
             AddGameDataObject<StamppotDish>();
             AddGameDataObject<uncookedHutspot>();
+
+            LogInfo("Done loading game data.");
+        }
+
+        protected override void OnPostActivate(KitchenMods.Mod mod)
+        {
+            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
+
+            AddGameData();
 
             // Add event to hutspotPot to knead, disabled for ease
             // !!! vgm is dit voor het aanpassen van bestaande dingen, zal wss überhaupt niet nodig zijn!

@@ -12,7 +12,7 @@ namespace StamppotDishes.Mains
         // Basic Dish properties
         public override string UniqueNameID => "Stamppot";
         public override DishType Type => DishType.Base;
-        public override GameObject DisplayPrefab => Mod.bundle.LoadAsset<GameObject>("hutspot");
+        public override GameObject DisplayPrefab => Mod.bundle.LoadAsset<GameObject>("Prutje");
         public override GameObject IconPrefab => DisplayPrefab;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeDecrease;
         public override CardType CardType => CardType.Default;
@@ -72,7 +72,7 @@ namespace StamppotDishes.Mains
         public override void OnRegister(GameDataObject gameDataObject)
         {
             // References to Hutspot.fbx
-            var hutspot = DisplayPrefab.GetChild("Hutspot");
+            var hutspot = DisplayPrefab.GetChild("Prutje");
             var plate = DisplayPrefab.GetChildFromPath("Plate/Plate.001");
 
             // Visuals??

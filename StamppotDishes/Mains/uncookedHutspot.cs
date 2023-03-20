@@ -63,7 +63,8 @@ namespace StamppotDishes.Mains
             }*/
         };
 
-        public override void OnRegister(GameDataObject gameDataObject)
+        
+        public override void OnRegister(ItemGroup uncookedHutspot)
         {
             var materials = new Material[]
             {

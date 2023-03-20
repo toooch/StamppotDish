@@ -13,7 +13,8 @@ namespace StamppotDishes.Mains
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
 
-        public override void OnRegister(GameDataObject gameDataObject)
+        
+        public override void OnRegister(Item hutspotPortion)
         {
             var materials = new Material[]
             {

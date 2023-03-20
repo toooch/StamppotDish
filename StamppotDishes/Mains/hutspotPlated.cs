@@ -43,7 +43,8 @@ namespace StamppotDishes.Mains
             }
         };
 
-        public override void OnRegister(GameDataObject gameDataObject)
+        
+        public override void OnRegister(ItemGroup hutspotPlated)
         {
 
             var hutspot = Prefab.GetChild("Hutspot");

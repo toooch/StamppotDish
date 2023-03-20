@@ -22,7 +22,7 @@ namespace StamppotDishes.Mains
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.Dish;
 
-        public override void OnRegister(GameDataObject gameDataObject)
+        public override void OnRegister(Item hutspotPot)
         {
             var materials = new Material[]
             {

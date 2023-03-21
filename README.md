@@ -70,7 +70,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 Discord:
-[Tooch#4004](https://discord.com/users/424576199038337034)
+[Tooch#4004](https://discord.com/users/424576199038337034) <br>
 [Dirk.#4004](https://discord.com/users/241279729448124416)
 
 Project Link: [https://github.com/toooch/StamppotDish](https://github.com/toooch/StamppotDish)

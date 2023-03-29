@@ -22,9 +22,9 @@ namespace StamppotDishes
         // Mod Version must follow semver notation e.g. "1.2.3"
         public const string MOD_GUID = "Tooch.PlateUp.StamppotDishes";
         public const string MOD_NAME = "Stamppot Dishes";
-        public const string MOD_VERSION = "0.0.3";
+        public const string MOD_VERSION = "0.0.5";
         public const string MOD_AUTHOR = "Tooch#4004, Dirk.#4004";
-        public const string MOD_GAMEVERSION = ">=1.1.4";
+        public const string MOD_GAMEVERSION = ">=1.1.3";
         // Game version this mod is designed for in semver
         // e.g. ">=1.1.3" current and all future
         // e.g. ">=1.1.3 <=1.2.3" for all from/until

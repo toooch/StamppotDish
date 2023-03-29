@@ -1,10 +1,10 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
 using System.Collections.Generic;
-using KitchenLib.Utils;
 using UnityEngine;
 using static KitchenData.ItemGroup;
 using IngredientLib.Util;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 namespace StamppotDishes.Mains
 {
@@ -42,13 +42,10 @@ namespace StamppotDishes.Mains
                 }
             }
         };
-
-        
         public override void OnRegister(ItemGroup hutspotPlated)
         {
-
-            var hutspot = Prefab.GetChild("Hutspot");
-            var plate = Prefab.GetChildFromPath("Plate/Plate.001");
+            GameObject hutspot = Prefab.GetChildFromPath("/UnityProject/Assets/Assets/Models/Prutje.fbx" );
+            GameObject plate = Prefab.GetChildFromPath("Plate/Plate.001");
 
             
         }

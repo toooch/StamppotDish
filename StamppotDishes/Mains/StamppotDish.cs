@@ -72,7 +72,7 @@ namespace StamppotDishes.Mains
         public override void OnRegister(GameDataObject gameDataObject)
         {
             // References to Hutspot.fbx
-            var hutspot = DisplayPrefab.GetChild("Prutje");
+            var hutspot = DisplayPrefab.GetChildFromPath("Prutje");
             var plate = DisplayPrefab.GetChildFromPath("Plate/Plate.001");
 
             // Visuals??
@@ -80,3 +80,4 @@ namespace StamppotDishes.Mains
         }
     }
 }
+

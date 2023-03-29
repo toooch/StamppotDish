@@ -4,7 +4,6 @@ using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace StamppotDishes.Mains
 {
     class hutspotPot : CustomItem

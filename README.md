@@ -69,7 +69,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- CONTACT -->
 ## Contact
-Discord:
+Discord: <br>
 [Tooch(tooch_)](https://discord.com/users/424576199038337034) <br>
 [Dirk.(dirkez)](https://discord.com/users/241279729448124416)
 
